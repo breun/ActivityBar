@@ -12,12 +12,44 @@
 		E9CA91C11B9B069300973F16 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CA91BF1B9B069300973F16 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E9CA91DA1B9B256000973F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C543D1C1A08396700C5D9B2;
+			remoteInfo = SystemKit;
+		};
+		E9CA91DC1B9B256000973F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C543D271A08396700C5D9B2;
+			remoteInfo = SystemKitTests;
+		};
+		E9CA91DE1B9B256000973F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4C4BE6071A083A690085170A;
+			remoteInfo = Example;
+		};
+		E9CA91E01B9B25F200973F16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C543D1B1A08396700C5D9B2;
+			remoteInfo = SystemKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E9CA91B81B9B069300973F16 /* ActivityBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CA91BB1B9B069300973F16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CA91BD1B9B069300973F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9CA91C01B9B069300973F16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		E9CA91C21B9B069300973F16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SystemKit.xcodeproj; path = SystemKit/SystemKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +68,7 @@
 			children = (
 				E9CA91BA1B9B069300973F16 /* ActivityBar */,
 				E9CA91B91B9B069300973F16 /* Products */,
+				E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +91,16 @@
 			path = ActivityBar;
 			sourceTree = "<group>";
 		};
+		E9CA91D51B9B256000973F16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9CA91DB1B9B256000973F16 /* SystemKit.framework */,
+				E9CA91DD1B9B256000973F16 /* SystemKitTests.xctest */,
+				E9CA91DF1B9B256000973F16 /* Example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +115,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E9CA91E11B9B25F200973F16 /* PBXTargetDependency */,
 			);
 			name = ActivityBar;
 			productName = ActivityBar;
@@ -103,12 +147,42 @@
 			mainGroup = E9CA91AF1B9B069300973F16;
 			productRefGroup = E9CA91B91B9B069300973F16 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E9CA91D51B9B256000973F16 /* Products */;
+					ProjectRef = E9CA91D41B9B256000973F16 /* SystemKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E9CA91B71B9B069300973F16 /* ActivityBar */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E9CA91DB1B9B256000973F16 /* SystemKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SystemKit.framework;
+			remoteRef = E9CA91DA1B9B256000973F16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9CA91DD1B9B256000973F16 /* SystemKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SystemKitTests.xctest;
+			remoteRef = E9CA91DC1B9B256000973F16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E9CA91DF1B9B256000973F16 /* Example */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Example;
+			remoteRef = E9CA91DE1B9B256000973F16 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E9CA91B61B9B069300973F16 /* Resources */ = {
@@ -132,6 +206,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9CA91E11B9B25F200973F16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SystemKit;
+			targetProxy = E9CA91E01B9B25F200973F16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E9CA91BF1B9B069300973F16 /* MainMenu.xib */ = {

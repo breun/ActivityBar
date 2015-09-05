@@ -681,7 +681,7 @@
                         <action selector="openConsole:" target="Voe-Tx-rLC" id="pPe-J9-AsN"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" id="rCd-qI-9EK">
+                <menuItem title="Quit ActivityBar" id="rCd-qI-9EK">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="quit:" target="Voe-Tx-rLC" id="wbi-Hj-qjd"/>
