@@ -10,12 +10,10 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
     
     @IBOutlet weak var statusMenu: NSMenu!
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength) // -1?
+    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         if let icon = NSImage(named: "statusIcon") {
