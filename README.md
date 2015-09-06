@@ -1,3 +1,5 @@
+![Build status](https://travis-ci.org/breun/ActivityBar.svg?branch=master)
+
 # ActivityBar
 
 ActivityBar is an OS X status bar application to monitor CPU and RAM usage.
