@@ -1,0 +1,3 @@
+language: objective-c # Actually it's Swift
+osx_image: xcode7
+xcode_project: ActivityBar.xcodeproj
