@@ -33,4 +33,8 @@ class History<Element>: SequenceType {
     func enumerate() -> EnumerateSequence<[Element]> {
         return entries.enumerate()
     }
+    
+    subscript(x: Int) -> Element {
+        return entries[x]
+    }
 }
