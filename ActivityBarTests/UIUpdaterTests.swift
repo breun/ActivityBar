@@ -51,7 +51,7 @@ class UIUpdaterTests: XCTestCase {
     
     func testDistance() {
         let uiUpdater = UIUpdater(button: NSButton())
-        let distance = uiUpdater.distance(10, numberOfElements: 11)
+        let distance = uiUpdater.distanceBetweenElements(10, numberOfElements: 11)
         XCTAssertEqual(distance, 1)
     }
 }

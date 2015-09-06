@@ -1,5 +1,5 @@
 //
-//  StatsUpdater.swift
+//  UIUpdater.swift
 //  ActivityBar
 //
 //  Created by Nils Breunese on 06-09-15.
@@ -62,7 +62,7 @@ class UIUpdater {
     func createPathFromCPUHistory(cpuHistory: History<CPUSample>, size: NSSize) -> NSBezierPath {
         let width = size.width
         let height = size.height
-        let xStepSize = distance(width, numberOfElements: maxCPUEntries) // x-distance between points on the graph
+        let xStepSize = distanceBetweenElements(width, numberOfElements: maxCPUEntries) // x-distance between points on the graph
         let path = NSBezierPath()
         
         path.moveToPoint(NSMakePoint(width, height)) // Start at bottom right
@@ -75,7 +75,7 @@ class UIUpdater {
         return path
     }
     
-    func distance(totalDistance: CGFloat, numberOfElements: Int) -> CGFloat {
+    func distanceBetweenElements(totalDistance: CGFloat, numberOfElements: Int) -> CGFloat {
         return totalDistance / CGFloat(numberOfElements-1)
     }
 }
