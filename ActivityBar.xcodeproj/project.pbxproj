@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E986ECD61B9CB633000721C7 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91E41B9C5B9F00973F16 /* History.swift */; settings = {ASSET_TAGS = (); }; };
+		E986ECDA1B9CEAC5000721C7 /* UIUpdaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E986ECD91B9CEAC5000721C7 /* UIUpdaterTests.swift */; settings = {ASSET_TAGS = (); }; };
+		E986ECDB1B9CF2F5000721C7 /* UIUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91EC1B9C796E00973F16 /* UIUpdater.swift */; settings = {ASSET_TAGS = (); }; };
+		E986ECDC1B9CF34D000721C7 /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91E81B9C631D00973F16 /* SystemMonitor.swift */; settings = {ASSET_TAGS = (); }; };
+		E986ECDD1B9CF351000721C7 /* CPUSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91E61B9C61EE00973F16 /* CPUSample.swift */; settings = {ASSET_TAGS = (); }; };
+		E986ECDE1B9CF354000721C7 /* MemorySample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91EA1B9C66B100973F16 /* MemorySample.swift */; settings = {ASSET_TAGS = (); }; };
 		E9CA91BC1B9B069300973F16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA91BB1B9B069300973F16 /* AppDelegate.swift */; };
 		E9CA91BE1B9B069300973F16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9CA91BD1B9B069300973F16 /* Assets.xcassets */; };
 		E9CA91C11B9B069300973F16 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9CA91BF1B9B069300973F16 /* MainMenu.xib */; };
@@ -73,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E986ECD91B9CEAC5000721C7 /* UIUpdaterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIUpdaterTests.swift; sourceTree = "<group>"; };
 		E9CA91B81B9B069300973F16 /* ActivityBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9CA91BB1B9B069300973F16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9CA91BD1B9B069300973F16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 			children = (
 				E9CA91FD1B9CB17D00973F16 /* Info.plist */,
 				E9CA92031B9CB1A400973F16 /* HistoryTests.swift */,
+				E986ECD91B9CEAC5000721C7 /* UIUpdaterTests.swift */,
 			);
 			path = ActivityBarTests;
 			sourceTree = "<group>";
@@ -307,7 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E986ECD61B9CB633000721C7 /* History.swift in Sources */,
+				E986ECDE1B9CF354000721C7 /* MemorySample.swift in Sources */,
+				E986ECDC1B9CF34D000721C7 /* SystemMonitor.swift in Sources */,
+				E986ECDB1B9CF2F5000721C7 /* UIUpdater.swift in Sources */,
 				E9CA92041B9CB1A400973F16 /* HistoryTests.swift in Sources */,
+				E986ECDD1B9CF351000721C7 /* CPUSample.swift in Sources */,
+				E986ECDA1B9CEAC5000721C7 /* UIUpdaterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

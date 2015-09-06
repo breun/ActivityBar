@@ -8,18 +8,22 @@
 
 import Cocoa
 
+// TODO: Decouple model from view
 class UIUpdater {
     
     let systemMonitor = SystemMonitor()
     
-    let cpuHistory = History<CPUSample>(maxElements: 20)
-    
+    // Model
+    let cpuHistory: History<CPUSample>
+    let maxCPUEntries = 20
     var memory: MemorySample?
     
+    // View
     let button: NSButton
     
     init(button: NSButton) {
         self.button = button
+        cpuHistory = History<CPUSample>(maxElements: maxCPUEntries)
     }
     
     func run() {
@@ -30,13 +34,48 @@ class UIUpdater {
             //print(cpuSample)
             cpuHistory.add(cpuSample)
             
-            let memorySample = systemMonitor.sampleMemory()
-            //print(memorySample)
-            memory = memorySample
+            memory = systemMonitor.sampleMemory()
+            //print(memory)
 
             button.title = String(format: "%.2f%%", cpuSample.used)
+            //button.image = renderImage()
             
             sleep(2)
         }
+    }
+    
+    // TODO: I don't think I understand how this works yet...
+    func renderImage() -> NSImage {
+        let size = NSSize(width: 40, height: 20) // TODO: What should this be?
+        let rect = NSRect(origin: NSMakePoint(0, 1), size: size)
+        let image = NSImage(size: size)
+        //let path = createPathFromCPUHistory(cpuHistory, size: size)
+        
+        image.lockFocus()
+        
+        image.drawAtPoint(NSMakePoint(0, 1), fromRect: rect, operation: NSCompositingOperation.CompositeSourceOver, fraction: 1.0)
+        image.unlockFocus()
+        
+        return image
+    }
+    
+    func createPathFromCPUHistory(cpuHistory: History<CPUSample>, size: NSSize) -> NSBezierPath {
+        let width = size.width
+        let height = size.height
+        let xStepSize = distance(width, numberOfElements: maxCPUEntries) // x-distance between points on the graph
+        let path = NSBezierPath()
+        
+        path.moveToPoint(NSMakePoint(width, height)) // Start at bottom right
+        for cpuSample in cpuHistory {
+            path.relativeLineToPoint(NSMakePoint(-xStepSize, height * CGFloat(cpuSample.idle)))
+        }
+        path.relativeLineToPoint(NSMakePoint(0, height)) // Drop back to baseline after drawing last sample
+        path.closePath()
+        path.fill()
+        return path
+    }
+    
+    func distance(totalDistance: CGFloat, numberOfElements: Int) -> CGFloat {
+        return totalDistance / CGFloat(numberOfElements-1)
     }
 }

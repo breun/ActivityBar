@@ -27,19 +27,19 @@ class HistoryTests: XCTestCase {
         XCTAssertEqual(history.count, 10)
     }
     
-    func testMostRecentlyAdded() {
+    func testLeastRecentlyAdded() {
         let history = History<Int>(maxElements: 10)
         for i in 1...20 {
             history.add(i)
         }
-        XCTAssertEqual(history[9], 20)
+        XCTAssertEqual(history[9], 11)
     }
     
-    func testOldestEntry() {
+    func testMostRecentlyEntry() {
         let history = History<Int>(maxElements: 10)
         for i in 1...20 {
             history.add(i)
         }
-        XCTAssertEqual(history[0], 11)
+        XCTAssertEqual(history[0], 20)
     }
 }
