@@ -11,3 +11,5 @@ Please note that this application is still UNDER CONSTRUCTION.
 * Used CPU% is currently shown in the status bar, but no graph yet.
 * All processing is currently still done on the main thread, which results in a lot of beachball spinning. This should be fixed soon.
 * Support for memory measurements has also been added already, but that's not visible in the user interface yet.
+
+Building this project requires OS X 10.11 with Xcode 7 (currently both still in beta).
