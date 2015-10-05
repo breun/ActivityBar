@@ -13,3 +13,7 @@ Please note that this application is still UNDER CONSTRUCTION.
 * Support for memory measurements has also been added already, but that's not visible in the user interface yet.
 
 Building this project requires OS X 10.11 with Xcode 7.
+
+# Alternative
+
+In the meantime Yuji Tachiwaka has modified the sourcecode of the original MenuMeters so it works on OS X 10.11, sacrificing the ability to rearrange its location in the status bar: http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/
